@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total-Sense Settings</title>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <h1 class="brand-name">Total Sense</h1>
+        <p class="lede">Configure the extension to use your VirusTotal API key directly from this browser.</p>
+      </section>
+
+      <section class="card">
+        <p class="section-label">Total-Sense</p>
+        <h2>Use your personal API key</h2>
+        <p class="body-copy">Sign in to VirusTotal, copy your personal API key, and paste it here.</p>
+        <p class="body-copy">
+          Get your key at
+          <a href="https://www.virustotal.com/gui/my-apikey" target="_blank" rel="noopener noreferrer">
+            virustotal.com/gui/my-apikey
+          </a>.
+        </p>
+
+        <form id="settingsForm" class="settings-form">
+          <label class="field">
+            <span class="field-label">API key</span>
+            <input
+              id="apiKeyInput"
+              class="field-input"
+              type="password"
+              name="apiKey"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="Paste your VirusTotal API key"
+            >
+          </label>
+
+          <div class="button-row">
+            <button id="saveButton" class="button button-primary" type="submit">Save key</button>
+            <button id="clearButton" class="button button-secondary" type="button">Clear key</button>
+          </div>
+        </form>
+
+        <p id="statusText" class="status" aria-live="polite"></p>
+      </section>
+
+      <section class="card card-muted">
+        <p class="section-label">Total-Sense</p>
+        <h2>Before you use it</h2>
+        <p class="body-copy">Public API keys are rate limited, so repeated checks and rescans will hit quota quickly.</p>
+        <p class="body-copy">Requesting a fresh analysis submits the current page URL to VirusTotal.</p>
+      </section>
+    </main>
+
+    <section
+      id="confirmClearModal"
+      class="modal is-hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="confirmClearTitle"
+      aria-describedby="confirmClearText"
+    >
+      <div id="confirmClearBackdrop" class="modal-backdrop"></div>
+      <div class="modal-card">
+        <p class="section-label">Total-Sense</p>
+        <h2 id="confirmClearTitle">Clear saved API key?</h2>
+        <p id="confirmClearText" class="body-copy">
+          Are you sure you want to clear your VirusTotal API key?
+        </p>
+        <div class="button-row">
+          <button id="confirmClearYes" class="button button-danger" type="button">Yes</button>
+          <button id="confirmClearNo" class="button button-secondary" type="button">No</button>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "total-sense",
+  "version": "0.1.0",
+  "description": "Browser extension for VirusTotal URL checks using the user's own API key.",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "powershell -ExecutionPolicy Bypass -File ./package-extension.ps1",
+    "package": "powershell -ExecutionPolicy Bypass -File ./package-extension.ps1"
+  }
+}

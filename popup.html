@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total-Sense</title>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="brand-panel">
+        <h1 class="brand-name">Total Sense</h1>
+        <p class="subcopy">Check the active tab against VirusTotal with your own API key.</p>
+      </section>
+
+      <section class="panel">
+        <p class="section-label">Page</p>
+        <p id="pageHost" class="page-host">Loading active tab...</p>
+        <p id="pageUrl" class="page-url"></p>
+
+        <article id="verdictCard" class="verdict-card is-hidden" aria-live="polite">
+          <p id="verdictTitle" class="verdict-title"></p>
+          <p id="verdictDetail" class="verdict-detail"></p>
+        </article>
+
+        <p id="messageText" class="message" aria-live="polite"></p>
+
+        <section id="facts" class="facts is-hidden" aria-label="Analysis details"></section>
+
+        <section id="detections" class="detections is-hidden" aria-label="Flagged by">
+          <div class="section-row">
+            <p class="section-label">Flagged by</p>
+          </div>
+          <ul id="detectionList" class="detection-list"></ul>
+        </section>
+      </section>
+
+      <section class="actions">
+        <button id="rescanButton" class="button button-primary" type="button">Request analysis</button>
+        <button id="openOptionsButton" class="button button-secondary" type="button">API key settings</button>
+      </section>
+    </main>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

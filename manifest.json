@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Total-Sense",
+  "version": "0.1.0",
+  "description": "One-click website reputation checks using your own VirusTotal API key.",
+  "icons": {
+    "16": "assets/icons/icon-16.png",
+    "32": "assets/icons/icon-32.png",
+    "48": "assets/icons/icon-48.png",
+    "128": "assets/icons/icon-128.png"
+  },
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://www.virustotal.com/*"
+  ],
+  "action": {
+    "default_title": "Total-Sense",
+    "default_icon": {
+      "16": "assets/icons/icon-16.png",
+      "32": "assets/icons/icon-32.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html"
+}
