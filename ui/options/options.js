@@ -1,4 +1,4 @@
-import { getStorage, removeStorage, setStorage } from "./lib/extension-api.js";
+import { getStorage, removeStorage, setStorage } from "../../lib/extension-api";
 
 const form = document.querySelector("#settingsForm");
 const apiKeyInput = document.querySelector("#apiKeyInput");

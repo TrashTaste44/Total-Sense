@@ -22,7 +22,7 @@
       "16": "assets/icons/icon-16.png",
       "32": "assets/icons/icon-32.png"
     },
-    "default_popup": "popup.html"
+    "default_popup": "ui/popup/popup.html"
   },
-  "options_page": "options.html"
+  "options_page": "ui/options/options.html"
 }

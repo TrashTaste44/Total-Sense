@@ -2,7 +2,7 @@ import {
   getActiveTab,
   getStorage,
   openOptionsPage
-} from "./lib/extension-api.js";
+} from "../../lib/extension-api";
 import {
   getDetections,
   getUrlReport,
@@ -11,7 +11,7 @@ import {
   rescanUrl,
   scanUrl,
   waitForCompletedAnalysis
-} from "./lib/virustotal.js";
+} from "../../lib/virustotal.js";
 
 const pageHost = document.querySelector("#pageHost");
 const pageUrl = document.querySelector("#pageUrl");
